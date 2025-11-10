@@ -4,7 +4,8 @@
 @{
     ViewBag.Title = "Blog";
 }
-
+<script src="~/js/blog.js"></script>
+<button id="showModalButton" class="btn btn-primary">New Blog</button>
 <div class="blog-list">
     <h1>Latest Blog Posts</h1>
     <hr />
@@ -33,4 +34,38 @@
         </div>
         <hr />
     }
+</div>
+
+
+
+
+<div id="myModal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">New Blog</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label class="form-control-label">Title</label>
+                    <input class="form-control" autocomplete="off" type="text" id="newTitle" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label">Blog</label>
+                    <textarea class="form-control custom-textarea" id="newBlogBody" rows="12" placeholder="Blog here..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label">AI Suggestion</label>
+                    <textarea class="form-control custom-textarea" id="newAIBody" rows="12" placeholder="AI processing..."></textarea>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" id="aiSuggestionBtn" class="btn btn-primary">AI Suggestion</button>
+                <button type="button" id="submitBlogBtn" class="btn btn-primary">Add</button>
+            </div>
+        </div>
+    </div>
 </div>

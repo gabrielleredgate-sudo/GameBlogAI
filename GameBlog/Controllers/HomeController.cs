@@ -23,6 +23,13 @@ namespace GameBlog.Controllers
             return View(data);
         }
 
+        [HttpPost]
+        [Route("NewBlogSubmit/{title}/{post}")]
+        public JsonResult NewBlogSubmit(string title, string post)
+        {
+          var result =  _context.SubmitNewPost(title, post);
+            return Json(new { success = result });
+        }
         public IActionResult Privacy()
         {
             return View();

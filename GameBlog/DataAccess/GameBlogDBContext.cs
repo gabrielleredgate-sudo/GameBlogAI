@@ -5,5 +5,7 @@ public class GameBlogDBContext : DbContext
 {
     public GameBlogDBContext(DbContextOptions<GameBlogDBContext> options) : base(options) { }
 
-    public DbSet<BlogPost> BlogPosts { get; set; }
+    public DbSet<blogpost> blogpost { get; set; }
+
+
 }

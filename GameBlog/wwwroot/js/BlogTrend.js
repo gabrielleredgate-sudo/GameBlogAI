@@ -35,14 +35,14 @@
                 y: data.yaxis,
                 type: 'scatter',
                 mode: 'lines',
-                name: 'Trendline',
+                name: 'Current Year Trendline',
                 line: { color: 'red', width: 2 }
             };
 
             traces.push(trendTrace);
             // Layout configuration
             let layout = {
-                title: 'Blogs per Year',
+                title: 'Blogs per Month',
                 xaxis: { title: 'Month' },
                 yaxis: { title: 'Count' }
             };

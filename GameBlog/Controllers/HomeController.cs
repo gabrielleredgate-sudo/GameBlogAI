@@ -52,7 +52,7 @@ namespace GameBlog.Controllers
             var result = client.CompleteChat(Messages);
 
 
-            return Json(new {success = true, message = result.Value.Content.FirstOrDefault().ToString() });
+            return Json(new {success = true, message = result.Value.Content.FirstOrDefault().Text.ToString() });
         }
         public IActionResult Privacy()
         {

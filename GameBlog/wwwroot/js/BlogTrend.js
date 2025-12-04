@@ -29,6 +29,17 @@
 
             traces.push(data2);
 
+
+            let trendTrace = {
+                x: data.xaxis,
+                y: data.yaxis,
+                type: 'scatter',
+                mode: 'lines',
+                name: 'Trendline',
+                line: { color: 'red', width: 2 }
+            };
+
+            traces.push(trendTrace);
             // Layout configuration
             let layout = {
                 title: 'Blogs per Year',

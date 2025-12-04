@@ -27,5 +27,18 @@ public class GameBlogDBContext : DbContext
         }
     }
 
+    public int[] GetCreationMonthCounts()
+    {
+        List<int> finalCounts = new List<int>();
+        var listOfBlogs = blogpost.Where(a => a.PostDate.Year == DateTime.Now.Year);
+
+        for( int i = 1; i < 13; i++)
+        {
+            finalCounts.Add(listOfBlogs.Where(a => a.PostDate.Month == i).Count());
+        }
+
+        return finalCounts.ToArray();
+    }
+
 
 }

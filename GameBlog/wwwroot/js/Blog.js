@@ -6,8 +6,8 @@
     });
 
     $("#aiSuggestionBtn").click(function (e){
-        var title = $("#newTitle").val();
-        var post = $("#newBlogBody").val();
+        let title = $("#newTitle").val();
+        let post = $("#newBlogBody").val();
 
 
 
@@ -30,8 +30,8 @@
     $("#submitBlogBtn").click(function (e) {
         e.preventDefault();
 
-        var title = $("#newTitle").val();
-          var post = $("#newBlogBody").val();
+        let title = $("#newTitle").val();
+        let post = $("#newBlogBody").val();
      
 
 
